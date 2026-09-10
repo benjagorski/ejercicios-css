@@ -48,7 +48,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — La grilla
+   TODO 1 ✅ — La grilla
    A .galeria dale:
    - display: grid
    - grid-template-columns: repeat(3, 1fr)    3 columnas iguales
@@ -56,16 +56,31 @@ body {
    - padding: 0 24px 24px
    fr es una fracción del espacio disponible. ¿Qué pasa si
    escribís repeat(6, 1fr)?
+   RESPUESTA: Se agrupan las 6 grillas una alado de la otra.
    ============================================================ */
 
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
 /* ============================================================
-   TODO 2 — Las tarjetas de las obras
+   TODO 2 ✅ — Las tarjetas de las obras
    A .obra dale:
    - background-color: #ffffff
    - border: 1px solid #e0d9cc
    - border-radius: 8px
    - padding: 16px
    ============================================================ */
+
+.obra {
+  background-color: #fff;
+  border: 1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
+}
 
 /* ============================================================
    TODO 3 — La obra destacada

@@ -61,7 +61,7 @@ body {
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   padding: 0 24px 24px;
 }
@@ -90,10 +90,17 @@ body {
    reacomodan las demás obras solas.
    ============================================================ */
 
+.destacada {
+  grid-column: span 2;
+}
+
 /* ============================================================
-   TODO 4 — Experimento responsive
+   TODO 4 ✅ — Experimento responsive
    Cambiá las columnas de la grilla por:
    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
    Achicá y agrandá la ventana: la grilla se adapta sola.
    Es la base de las galerías responsivas modernas.
    ============================================================ */
+
+
+

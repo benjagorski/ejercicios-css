@@ -67,7 +67,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Estilos base (escritorio)
+   TODO 1 ✅ — Estilos base (escritorio)
    A .barra dale:
    - display: flex
    - justify-content: space-between
@@ -83,8 +83,33 @@ body {
    - padding: 24px
    ============================================================ */
 
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #3e2b23;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a{
+  color: #fff;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px;
+}
+
 /* ============================================================
-   TODO 2 — Tableta (hasta 900px)
+   TODO 2 ✅ — Tableta (hasta 900px)
    Con una media query, cuando la pantalla mida MÁXIMO 900px:
    @media (max-width: 900px) { ... }
    - .tarjetas  grid-template-columns: repeat(2, 1fr)
@@ -92,17 +117,41 @@ body {
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
 
+@media (max-width: 900px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
 /* ============================================================
-   TODO 3 — Celular (hasta 600px)
+   TODO 3 ✅ — Celular (hasta 600px)
    Otra media query, ahora con max-width: 600px:
    - .tarjetas  grid-template-columns: 1fr
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
 
+@media (max-width: 600px){
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+  .barra {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nota {
+    text-align: center;
+  }
+}
+
 /* ============================================================
     PARA PENSAR
    ¿Por qué la media query de 600px tiene que ir DESPUÉS de la
    de 900px en el archivo? (Pista: cuando las dos condiciones
    se cumplen a la vez, ¿qué gana según la cascada?)
+   RESPUESTA: POR LA REGLA DE CASCADA SIEMPRE VA LA MAS GRANDE 
+   Y DESPUES LA MAS CHICA
    ============================================================ */

@@ -25,7 +25,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -37,6 +37,7 @@ body {
 
 .panaderia {
   max-width: 640px;
+  margin: 0 auto /* 3er bug */
 }
 
 .cabecera {
@@ -47,7 +48,7 @@ body {
 }
 
 .logo {
-  font-size: 4vw;
+  font-size: 1.5rem; /* PRIMER BUG, TITULO CRECIENTE ✅ */
   font-weight: bold;
 }
 
@@ -56,7 +57,7 @@ body {
 }
 
 .productos {
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 
 .producto {
@@ -81,17 +82,17 @@ body {
   position: absolute;
   top: -10px;
   right: 12px;
-  width: 70px;
+  /* width: 70px; */ /* 2DO BUG ETIQUETA ✅ */ 
   background-color: #e8a33d;
   color: #3b2a12;
-  font-size: 0.8rem;
+  font-size: 0.81rem;
   padding: 4px 10px;
   border-radius: 999px;
 }
 
 .pie {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #7a6a5a;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }

@@ -63,8 +63,9 @@ body {
   margin: 0 auto;
 }
 
-.destacado {
+.item.destacado {
   border-left: 6px solid #b25b1f;
+  border-radius: 0;
 }
 
 .item {
@@ -80,23 +81,22 @@ body {
 }
 
 .precio {
-  color: #2a9d8f !important;
+  color: #2a9d8f;  /* bug 1 !important*/
   font-weight: bold;
 }
 
-.etiqueta,
-2026-ofertas {
+.etiqueta{ /*bug borrar el 2026 */
   display: inline-block;
   background-color: #e63946;
-  color: #ffffff;
+  color: #fff;
   font-size: 0.75rem;
   padding: 2px 8px;
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
-.lista :not(.oferta) {
-  color: #2a9d8f;
+.lista :not(.oferta) .precio {
+  color: rgb(1, 163, 163); /* bug 2 color */
 }
 
 .oferta .precio {
